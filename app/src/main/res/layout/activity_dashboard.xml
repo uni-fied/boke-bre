@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/clDashboard"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:orientation="vertical"
+    tools:context=".DashboardActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/top1"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/primary_color"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:id="@+id/top2"
+            android:layout_width="match_parent"
+            android:layout_height="105dp"
+            android:paddingLeft="25dp"
+            android:paddingTop="25dp"
+            android:paddingRight="25dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_weight="2.3"
+                    android:src="@drawable/man" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:textColor="@color/teal_200"
+                            android:textSize="5.5pt"
+                            android:fontFamily="sans-serif"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="UID : "/>
+
+                        <TextView
+                            android:id="@+id/txUIDUser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-black"
+                            android:gravity="center_vertical"
+                            android:text="@string/uid_user"
+                            android:textColor="#fff"
+                            android:textSize="5.5pt" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txNameUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center_vertical"
+                        android:text="@string/name_user"
+                        android:textColor="@color/white"
+                        android:textSize="9pt" />
+
+                    <TextView
+                        android:id="@+id/txMailUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center_vertical"
+                        android:text="sample@gmail.com"
+                        android:textColor="@color/teal_200"
+                        android:textSize="6pt" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txVersiApl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/lbl_version"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="3dp"
+                    android:text="..."
+                    android:textColor="@color/primary_color"
+                    android:textSize="7pt" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/top3"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/top2"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="6dp"
+            app:cardMaxElevation="35dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="9dp"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/mnIncome"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imvIncome"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:src="@drawable/income" />
+
+                    <TextView
+                        android:id="@+id/txtIncome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:text="Income"
+                        android:textColor="@color/primary_color"
+                        android:textSize="7pt" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mnOutcome"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imvOutcome"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:paddingTop="8dp"
+                        android:src="@drawable/outcome" />
+
+                    <TextView
+                        android:id="@+id/txtOutcome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:text="Outcome"
+                        android:textColor="@color/secondary_color_two"
+                        android:textSize="5pt" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mnTabungan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imvTabungan"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:paddingTop="8dp"
+                        android:src="@drawable/growth" />
+
+                    <TextView
+                        android:id="@+id/txtTabungan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:text="Tabungan"
+                        android:textColor="@color/secondary_color_two"
+                        android:textSize="5pt" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/mnInvestasi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imvInvest"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:paddingTop="8dp"
+                        android:src="@drawable/invest" />
+
+                    <TextView
+                        android:id="@+id/txtInvest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:text="Investasi"
+                        android:textColor="@color/secondary_color_two"
+                        android:textSize="5pt" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/mnAset"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imvAset"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:paddingTop="8dp"
+                        android:src="@drawable/target" />
+
+                    <TextView
+                        android:id="@+id/txtAset"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:text="Aset"
+                        android:textColor="@color/secondary_color_two"
+                        android:textSize="5pt" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutDataActivity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/top1"
+            android:gravity="center_vertical|center"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/flContainer"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/vpContainer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

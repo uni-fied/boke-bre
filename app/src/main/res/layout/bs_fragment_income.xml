@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/bsTambahIncomeContainer"
+    android:background="@drawable/bottom_sheet_background"
+    android:layout_height="wrap_content">
+
+    <!--
+    Added : Form tambah pengeluaran
+    -->
+    <LinearLayout
+        android:id="@+id/layoutTambahPengeluaran"
+        android:padding="5dp"
+        android:visibility="visible"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="30dp" >
+
+        <LinearLayout
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_weight="1"
+                android:textColor="@color/primary_color"
+                android:textSize="9pt"
+                android:fontFamily="sans-serif-black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tambah Pengeluaran"/>
+
+            <LinearLayout
+                android:gravity="right"
+                android:layout_weight="3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:fontFamily="sans-serif-black"
+                    android:id="@+id/btBatalkanTambahPengeluaran"
+                    android:textColor="#E91E63"
+                    android:gravity="center_vertical|right"
+                    android:text="Batalkan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:paddingLeft="9dp"
+            android:paddingRight="9dp"
+            android:paddingTop="7dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical|left"
+            android:paddingBottom="10dp"
+            android:background="@drawable/lbl_berhasil_tambah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#4CAF50"
+            android:drawablePadding="9dp"
+            android:drawableLeft="@drawable/ic_wait_2"
+            android:text="Yuk, maksimalkan pengeluaran, pastikan sesuai dengan post-post yang sudah diatur, jangan lupa nabung ya 😘"/>
+
+        <EditText
+            android:layout_marginTop="18dp"
+            android:inputType="textCapWords"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_weight="1"
+            android:textSize="7pt"
+            android:gravity="center|left"
+            android:background="@drawable/edt_rounded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Pengeluaran untuk apa? Ex: Parkir, Bayar Listrik"/>
+
+        <EditText
+            android:layout_marginTop="10dp"
+            android:inputType="textCapWords"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_weight="1"
+            android:textSize="7pt"
+            android:gravity="center|left"
+            android:background="@drawable/edt_rounded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Deskripsi pengeluaran / detail?"/>
+
+        <EditText
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_weight="1"
+            android:textSize="7pt"
+            android:gravity="center|left"
+            android:background="@drawable/edt_rounded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Jumlah pengeluaran"/>
+
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/lbl_tambah_pengeluaran"
+            android:fontFamily="sans-serif-black"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="5dp"
+            android:gravity="center_vertical|center"
+            android:text="Tambah Pengeluaran"
+            android:textColor="@color/white"
+            android:textSize="7pt" />
+
+    </LinearLayout>
+
+    <!--
+    Added : Form tambah sumber pemasukan
+    -->
+    <LinearLayout
+        android:id="@+id/layoutTambahKategoriIncome"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="30dp" >
+
+        <LinearLayout
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_weight="1"
+                android:textColor="@color/primary_color"
+                android:textSize="9pt"
+                android:fontFamily="sans-serif-black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tambah Sumber Pemasukan"/>
+
+            <LinearLayout
+                android:gravity="right"
+                android:layout_weight="3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:fontFamily="sans-serif-black"
+                    android:id="@+id/btBatalkanTambahKategoriIncome"
+                    android:textColor="#E91E63"
+                    android:gravity="center_vertical|right"
+                    android:text="Batalkan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/progresLoadingTambahKategoriIncome"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+
+        <LinearLayout
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edtKategoriIncome"
+                android:inputType="textCapWords"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:layout_weight="1"
+                android:textSize="7pt"
+                android:layout_marginRight="10dp"
+                android:gravity="center|left"
+                android:background="@drawable/edt_rounded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tuliskan Sumber Pemasukan"/>
+
+            <LinearLayout
+                android:gravity="right|center"
+                android:layout_weight="3"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/btnTambahKategoriIncome"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/lbl_jumlah_saldo"
+                    android:fontFamily="sans-serif-black"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="5dp"
+                    android:gravity="center_vertical|center"
+                    android:text="Tambah"
+                    android:textColor="@color/white"
+                    android:textSize="7pt" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="2dp"
+            android:textStyle="italic"
+            android:textSize="5.8pt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="*) Tulis sumber pemasukan yang ingin anda tambahkan, Contoh sederhananya seperti ex : PT. Global Pristiya, Freelance, dlsb."/>
+
+    </LinearLayout>
+
+    <!--
+    Added : Form input detail pemasukan setelah mengisi form sumber pemasukan
+    -->
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/layoutTambahDataPemasukan"
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="30dp">
+
+        <TextView
+            android:id="@+id/txGetMessageSucces"
+            android:paddingLeft="9dp"
+            android:paddingRight="9dp"
+            android:paddingTop="7dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical|left"
+            android:paddingBottom="7dp"
+            android:background="@drawable/lbl_berhasil_tambah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#4CAF50"
+            android:drawablePadding="9dp"
+            android:drawableLeft="@drawable/ic_wait_2"
+            android:text="Laoding..."/>
+
+        <LinearLayout
+            android:layout_marginTop="19dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_weight="1"
+                android:textColor="@color/primary_color"
+                android:textSize="9pt"
+                android:fontFamily="sans-serif-black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Data Pemasukan"/>
+
+            <LinearLayout
+                android:gravity="right"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txBatalkanProsesSimpanIncome"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="#E91E63"
+                    android:gravity="center_vertical|right"
+                    android:text="Cancel Pemasukan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/progresLoadingTambahPemasukan"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+
+        <LinearLayout
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etDeskripsiPemasukan"
+                android:inputType="textCapSentences|textMultiLine"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:layout_weight="1"
+                android:textSize="7pt"
+                android:gravity="center|left|top"
+                android:background="@drawable/edt_rounded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:maxLength="125"
+                android:hint="Tuliskan Deskripsi dari Pemasukan"/>
+
+            <EditText
+                android:id="@+id/etJmlIncome"
+                android:inputType="numberSigned|textMultiLine"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:layout_weight="1"
+                android:textSize="7pt"
+                android:gravity="center|left"
+                android:background="@drawable/edt_rounded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:maxLength="12"
+                android:layout_marginTop="10dp"
+                android:hint="Jumlah Pemasukan Ex: 1000000"/>
+
+            <TextView
+                android:id="@+id/btnTambahkanPemasukanNow"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/lbl_tabungan"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center_vertical|center"
+                android:layout_marginTop="20dp"
+                android:text="Tambahkan Pemasukan"
+                android:textColor="@color/white"
+                android:textSize="7pt" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
