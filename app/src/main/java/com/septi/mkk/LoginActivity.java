@@ -85,7 +85,8 @@ public class LoginActivity extends AppCompatActivity {
                     tx_password.setError("Masukan Password Dulu!");
                 } else {
                     function.hideKeyboard(view);
-                    function.procedureLogin(username, kunci);
+                    String accesTime = function.convertMilisecond2ReadableFormat(System.currentTimeMillis());
+                    function.procedureLogin(username, kunci, accesTime);
                 }
             }
         });

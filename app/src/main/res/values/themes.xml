@@ -15,6 +15,11 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="ThemeStyle" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="android:windowSoftInputMode">adjustResize</item> // Memposisikan agar keyboard berada di bawah bottomsheet dialog
+        <item name="android:windowIsFloating">false</item> // Pengaturan ini sama jg seperti diatas, ke2 pengaturan ini harus ada
+    </style>
+
     <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
         <item name="android:windowSoftInputMode">adjustResize</item> // Memposisikan agar keyboard berada di bawah bottomsheet dialog

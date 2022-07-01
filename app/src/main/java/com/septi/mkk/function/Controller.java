@@ -6,10 +6,11 @@ public class Controller {
      * Endpoint API
      * */
 
-    private static String ip_address            = "192.168.0.172";
+    private static String ip_address            = "your-ip";
+    private static String domain                = "your-hosting";
 
     public static String localhost              = "http://" + ip_address + "/manajemen-keuangan/module/"; // Local
-    public static String hosting                = "https://academydevlts.000webhostapp.com/api/mkk/v1/module/"; // Hosting
+    public static String hosting                = "http://" + domain + "/api/manajemen-keuangan/module/"; // Hosting
 
     public static String login                  = "auth/login.php";
 
@@ -27,19 +28,21 @@ public class Controller {
      * Prosedure Kelola Pengeluaran
      * */
 
-
+    public static String data_pengeluaran       = "outcome/data_outcome.php"; // Data Outcome
+    public static String tambahkan_pengeluaran  = "outcome/tambah_data_pengeluaran.php"; // Tambah Data Outcome
+    public static String hapus_item_pengeluaran = "outcome/hapus_item_pengeluaran.php"; // Hapus Item Data Outcome
 
     /*
      * Versi & Build App
      * */
 
-    public static String versionApp             = "V1.0";
-    public static String buildVersion           = "Build 30042022.110910";
+    public static String versionApp             = "V1.0 BETA";
+    public static String buildVersion           = "Build 07062022.0935.1";
 
     /*
      * Timeout Size Time (Millisecond)
      * */
 
-    public static int timeout_long              = 5000;
+    public static int timeout_long              = 60000;
 
 }

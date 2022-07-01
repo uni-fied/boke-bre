@@ -14,20 +14,25 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
 
+import com.septi.mkk.function.Controller;
 import com.septi.mkk.function.Functions;
 import com.septi.mkk.library.TinyDB;
 import com.septi.mkk.preferences.PreferencesLogin;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.ZonedDateTime;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.TimeZone;
 
 public class SplashActivity extends AppCompatActivity {
 
     Context contextSplashActivity;
     Functions function;
+    TextView tvVersionSplash;
     TinyDB tinyDB;
     Handler landingpage;
 
@@ -53,10 +58,13 @@ public class SplashActivity extends AppCompatActivity {
          * */
         statusLogin = PreferencesLogin.getStatusLogin(contextSplashActivity);
 
+        tvVersionSplash = findViewById(R.id.tvVersionAppSplash);
+        tvVersionSplash.setText(Controller.versionApp);
+
         /*
          * Added : Setup default access server db
          * */
-        tinyDB.putString("SWITCH_SERVER", "LOCAL");
+        tinyDB.putString("SWITCH_SERVER", "HOSTING");
 
         landingpage.postDelayed(() -> {
 
@@ -84,49 +92,8 @@ public class SplashActivity extends AppCompatActivity {
                         + PreferencesLogin.getAkunToken(contextSplashActivity));
 
 
-
-        // ex : Build 29042022.061104
-        Log.e("BUILD_VERSION", function.buildVersionApp());
-
-        // ex : true or false
-        Log.e("STATUS_LOGIN", statusLogin);
-
-        // ex : April
-        Log.e("GET_MONTH", function.getMonth());
-
-        // ex : 2022
-        Log.e("GET_YEAR", String.valueOf(function.getTahunInteger()));
-
-        // ex : Time Milis
-        Log.e("GET_TIMEMILIS", String.valueOf(System.currentTimeMillis()));
-
-        long currentDateTime = System.currentTimeMillis();
-
-        Date currentDate = new Date(currentDateTime);
-
-        //printing value of Date
-        System.out.println("current Date: " + currentDate);
-
-        @SuppressLint("SimpleDateFormat") DateFormat df = new SimpleDateFormat("dd MMMM yyyy HH:mm:ss");
-        @SuppressLint("SimpleDateFormat") DateFormat formatnew = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-
-        //formatted value of current Date
-        System.out.println("Milliseconds to Date: " + df.format(currentDate));
-        System.out.println("Milliseconds to Date new format: " + formatnew.format(currentDate));
-
-        //Converting milliseconds to Date using Calendar
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTimeInMillis(currentDateTime);
-        System.out.println("Milliseconds to Date using Calendar:" + df.format(calendar.getTime()));
-        System.out.println("Milliseconds to Date using Calendar New format :" + formatnew.format(calendar.getTime()));
-
-        //Copying one Date's value into another Date in Java
-        Date now = new Date();
-        Date copiedDate = new Date(now.getTime());
-
-        System.out.println("Original Date: " + df.format(now));
-        System.out.println("Copied Date: " + df.format(copiedDate));
-
+        Log.e("GETTIMZOMEGMT", function.getGMTtimezone());
+        Log.e("GETTIMZOMEAREA", function.getTimeZoneArea());
 
         buildStatusBar();
     }

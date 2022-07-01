@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardItemData"
+        android:id="@+id/cardItemDataOutCome"
         app:cardCornerRadius="5dp"
         app:cardElevation="6dp"
         app:cardMaxElevation="30dp"
@@ -16,7 +16,6 @@
         android:layout_marginTop="6dp"
         android:layout_marginBottom="13dp"
         android:layout_marginRight="15dp"
-        android:clickable="true"
         android:foreground="?android:attr/selectableItemBackground">
 
         <LinearLayout
@@ -181,7 +180,7 @@
                     android:gravity="center_vertical"
                     android:layout_marginLeft="3dp"
                     android:layout_weight="1"
-                    android:maxLines="2"
+                    android:maxLines="3"
                     android:textColor="#000"
                     android:text="Untuk bayar parkir di indomart dan alfamart, masing2 2000 belanja popok dede oleh Fithri Febiyani Yunus"
                     android:textSize="5pt"
@@ -220,7 +219,7 @@
                 </LinearLayout>
 
                 <TextView
-                    android:id="@+id/txtSumberIncomeby"
+                    android:id="@+id/txtSumberIncomefrom"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"

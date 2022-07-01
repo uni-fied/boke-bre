@@ -31,27 +31,27 @@
                     android:indeterminate="true" />
 
                 <LinearLayout
-                    android:visibility="gone"
                     android:id="@+id/layErrorNetworkIncome"
-                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="16dp"
-                    android:paddingRight="13dp"
                     android:background="@drawable/lbl_network_bermasalah"
+                    android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:paddingRight="13dp"
+                    android:visibility="gone">
 
                     <TextView
-                        android:gravity="center_vertical"
                         android:id="@+id/txtErrorNetwork"
-                        android:layout_weight="1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:drawableLeft="@drawable/warning"
                         android:drawablePadding="10dp"
                         android:fontFamily="sans-serif-black"
+                        android:gravity="center_vertical"
                         android:paddingLeft="10dp"
                         android:paddingTop="7dp"
                         android:paddingRight="15dp"
@@ -62,17 +62,17 @@
 
                     <TextView
                         android:id="@+id/btnReloadErrorNetwork"
-                        android:textColor="#F44336"
-                        android:paddingTop="4dp"
-                        android:paddingBottom="5dp"
-                        android:textSize="5.3pt"
-                        android:fontFamily="sans-serif-black"
-                        android:background="@drawable/lbl_version"
-                        android:gravity="center"
-                        android:layout_weight="4.4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Load"/>
+                        android:layout_weight="4.4"
+                        android:background="@drawable/lbl_version"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="5dp"
+                        android:text="Load"
+                        android:textColor="#F44336"
+                        android:textSize="5.3pt" />
 
 
                 </LinearLayout>
@@ -106,8 +106,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
                     android:layout_marginLeft="25dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:layout_weight="1"
                     android:fontFamily="sans-serif-black"
@@ -117,18 +117,18 @@
                     android:textSize="7pt" />
 
                 <LinearLayout
-                    android:gravity="right"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:gravity="right"
                     android:orientation="vertical">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/top2"
-                        android:layout_marginRight="25dp"
                         android:layout_marginTop="10dp"
+                        android:layout_marginRight="25dp"
                         android:layout_marginBottom="10dp"
                         android:backgroundTint="#009688"
                         android:clickable="true"
@@ -198,7 +198,7 @@
                             android:layout_weight="1.5"
                             android:fontFamily="sans-serif-black"
                             android:gravity="center_vertical"
-                            android:text="Saldo Pemasukan"
+                            android:text="Jumlah Saldo"
                             android:textColor="@color/secondary_color"
                             android:textSize="7pt" />
 
@@ -269,11 +269,11 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:visibility="gone">
 
                         <TextView
                             android:layout_width="match_parent"
@@ -311,11 +311,11 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:visibility="gone">
 
                         <TextView
                             android:layout_width="match_parent"
@@ -415,23 +415,24 @@
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
-                android:layout_marginTop="10dp"
                 android:id="@+id/rvListDataMaintain"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="gone" />
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="48dp"/>
+                android:layout_height="48dp" />
 
             <LinearLayout
-                android:layout_marginTop="35dp"
                 android:id="@+id/layInfoBelumAdaData"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginTop="35dp"
                 android:gravity="center"
-                android:visibility="gone"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="visible">
 
                 <LinearLayout
                     android:id="@+id/bagBelumAdaData"
@@ -441,11 +442,11 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:visibility="gone"
                         android:id="@+id/imgInfoDataIncome"
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
-                        android:src="@drawable/wait" />
+                        android:src="@drawable/wait"
+                        android:visibility="gone" />
 
                     <TextView
                         android:id="@+id/tvTitleInfoDataIncome"
