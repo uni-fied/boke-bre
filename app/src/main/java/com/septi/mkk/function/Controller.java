@@ -7,7 +7,7 @@ public class Controller {
      * */
 
     private static String ip_address            = "your-ip";
-    private static String domain                = "your-hosting";
+    private static String domain                = "journalcode.atwebpages.com";
 
     public static String localhost              = "http://" + ip_address + "/manajemen-keuangan/module/"; // Local
     public static String hosting                = "http://" + domain + "/api/manajemen-keuangan/module/"; // Hosting
@@ -36,7 +36,7 @@ public class Controller {
      * Versi & Build App
      * */
 
-    public static String versionApp             = "V1.0 BETA";
+    public static String versionApp             = "V1.0 BETA RELEASE";
     public static String buildVersion           = "Build 07062022.0935.1";
 
     /*
